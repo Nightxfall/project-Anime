@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', serif;
+    text-decoration: none;
+    
+}
+
+body{
+    background-image:  url("../../assets/img/inicio/Back_ground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.all{
+    display: flex;
+    flex-direction: row;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    padding: 10px;
+    margin:  10px;
+    margin-top: 250px;
+
+    justify-content: center;
+    
+
+}
+/*
+section{
+    display: flex;
+}
+section  article{
+    display: flex;
+
+} 
+*/
+
+section > article > p {
+    width: 40%;
+    padding: 10px;
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    display: inline;
+
+}
+
+ .lista__pag a{
+    margin: 10px;
+    padding: 10px;
+    color: brown;
+    text-decoration: none;
+    list-style: square;
+    font-size: 30px;
+}
+
+/* nuevo */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .card-title {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+/* Fondo oscuro translúcido que cubre toda la pantalla */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Oscurece el fondo de la web */
+    backdrop-filter: blur(5px); /* Efecto difuminado moderno */
+    z-index: 9999; /* Asegura que se sitúe por encima de toda la página */
+    
+    /* El truco CSS: Oculto por defecto */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* El truco de magia: Cuando el enlace "?" es pulsado, el modal se activa */
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Caja del formulario central */
+.modal__content {
+    background-color: #15171e; /* Fondo gris oscuro mate */
+    border: 2px solid #ff8c00; /* Borde naranja característico */
+    border-radius: 12px;
+    width: 90%;
+    max-width: 380px;
+    padding: 35px 25px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-20px);
+    transition: transform 0.4s ease;
+}
+
+/* Animación sutil de caída cuando aparece el modal */
+.modal:target .modal__content {
+    transform: translateY(0);
+}
+
+/* Botón de cerrar (X) */
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #85929E;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.modal__close:hover {
+    color: #ff8c00;
+}
+
+.modal__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Estructura de los inputs */
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    color: #85929E;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    background-color: #0b0c10;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #ff8c00; /* El input se ilumina en naranja al escribir */
+}
+
+/* Botón de envío */
+.modal__btn {
+    background-color: #ff8c00;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+    margin-top: 10px;
+}
+
+.modal__btn:hover {
+    opacity: 0.9;
+}

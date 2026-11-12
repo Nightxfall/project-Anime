@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mangas</title>
+	<link rel="icon" type="image/png" size="64x64" href="img_manga/fa.png">
+	<link rel="stylesheet" type="text/css" href="../../css/global/Style__header.css">
+	<link rel="stylesheet" href="../../css/pages/mangas.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul class="menu__horizontal">
+				<li><a href="#">My Anime List</a></li>
+				<li><a href="#">
+						<label for="buscar" class="search">Buscar</label>
+						<input id="buscar" type="search" placeholder="Buscar...">
+					</a></li>
+				<li><a href="../../index.html">Inicio</a></li>
+				<li><a href="#">Menu</a>
+					<ul class="menu__vertical">
+						<li><a href="../anime-recommended/Animes_recommended.html">Animes recomendados </a></li>
+						<li><a href="../anime-seen/Animes_seen.html">Animes vistos</a></li>
+						<li><a href="../movie-anime/Movie_anime.html">Películas Anime</a></li>
+						<li><a href="../movie-anime-seen/Movie_anime_seen.html">Películas Anime vistas</a></li>
+						<li><a href="../mangas/Mangas.html">Manga</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Recientes</a></li>
+				<li><a href="#">?</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<section class="books-section">
+			<div class="container">
+
+				<div class="layout-biblioteca ">
+
+					<!-- Columna Izquierda -->
+					<aside class="sidebar-filtros">
+						<h3>Filtros de busqueda</h3>
+						<!--Barra de buscador-->
+						<div class="search-box">
+							<svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2">
+								<circle cx="11" cy="11" r="8"></circle>
+								<path d="m21 21-4.3-4.3"></path>
+							</svg>
+							<input type="text" id="searchInput" placeholder="Buscar por título, autor o género...">
+						</div>
+
+						<!--Filtro de generos por pildoras-->
+						<div class="genre-filter-container">
+							<span class="filter-label">Géneros</span>
+							<div id="genre-options-tags" class="genre-tags-grid">
+								<button class="genre-tag-btn" data-genre="comedia">Comedia</button>
+								<button class="genre-tag-btn" data-genre="drama">Drama</button>
+								<button class="genre-tag-btn" data-genre="gender-bender">Gender Bender</button>
+								<button class="genre-tag-btn" data-genre="sci-fi">Sci-Fi</button>
+								<button class="genre-tag-btn" data-genre="romance">Romance</button>
+								<button class="genre-tag-btn" data-genre="isekai">Isekai</button>
+								<button class="genre-tag-btn" data-genre="psicologico">Psicologico</button>
+
+							</div>
+						</div>
+
+						<!--FILTRO POR TIPOS-->
+						<div class="type-filter-container">
+							<span class="filter-label">Tipo</span>
+							<div id="type-tabs" class="type-segmented-control">
+								<button class="type-tab active" data-type="todos">Todos</button>
+								<button class="type-tab" data-type="manga">Manga</button>
+								<button class="type-tab" data-type="manwha">Manwha</button>
+								<button class="type-tab" data-type="one-shot">One-Shot</button>
+
+							</div>
+						</div>
+
+						<!--filtro por estado-->
+						<div class="filter-group">
+							<span class="filter-label">Estado</span>
+							<div id="status-tabs" class="status-segmented-control">
+								<button class="status-tab active" data-status="todos">Todos</button>
+								<button class="status-tab" data-status="leyendo">Leyendo</button>
+								<button class="status-tab" data-status="terminado">Terminado</button>
+								<button class="status-tab" data-status="por-leer">Por Leer</button>
+							</div>
+						</div>
+
+						<!--Bonton de reinicio de filtros-->
+						<div class="button-reset">
+							<button class="reset-filters" id="btnResetAll">REINICIAR FILTROS</button>
+						</div>
+
+					</aside>
+
+
+					<div class="catalogo">
+						<div class="section-header">
+							<h3>Comics Destacados</h3>
+
+							<!--filtro por tipo--
+								<div class="status-container">
+									<span class="filter-label">Estado</span>
+									<div id="status-tabs" class="status-segmented-control">
+										<button class="status-tab active" data-status="todos">Todos</button>
+										<button class="status-tab" data-status="leyendo">Leyendo</button>
+										<button class="status-tab" data-status="terminado">Terminado</button>
+										<button class="status-tab" data-status="por-leer">Por Leer</button>
+									</div>
+								</div>
+							
+							-->
+
+							<div class="view-toggle">
+								<button class="view-btn active" data-view="grid">
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2">
+										<rect x="3" y="3" width="7" height="7"></rect>
+										<rect x="14" y="3" width="7" height="7"></rect>
+										<rect x="14" y="14" width="7" height="7"></rect>
+										<rect x="3" y="14" width="7" height="7"></rect>
+									</svg>
+								</button>
+								<button class="view-btn" data-view="list">
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2">
+										<line x1="8" y1="6" x2="21" y2="6"></line>
+										<line x1="8" y1="12" x2="21" y2="12"></line>
+										<line x1="8" y1="18" x2="21" y2="18"></line>
+										<line x1="3" y1="6" x2="3.01" y2="6"></line>
+										<line x1="3" y1="12" x2="3.01" y2="12"></line>
+										<line x1="3" y1="18" x2="3.01" y2="18"></line>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="books-grid" id="booksGrid"></div>
+						<div class="books-list" id="booksList" style="display: none;"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+
+	<div class="modal" id="bookModal">
+		<div class="modal-content">
+			<button class="modal-close" id="modalClose">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+
+			<div class="modal-body">
+				<div class="modal-cover" id="modalCover"></div>
+				<div class="modal-info">
+					<span class="modal-categories-group" id="modalCategory"></span>
+					<h2 class="modal-title" id="modalTitle"></h2>
+					<p class="modal-author" id="modalAuthor"></p>
+					<div class="modal-rating" id="modalRating"></div>
+					<div class="modal-description-wrapper">
+						<p class="modal-description" id="modalDescription"></p>
+					</div>
+
+					<div class="modal-meta">
+						<div class="meta-item">
+							<span class="meta-label">Estado</span>
+							<span class="meta-value" id="modalStatus"></span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Año</span>
+							<span class="meta-value" id="modalYear"></span>
+						</div>
+						<!--
+						<div class="meta-item">
+							<span class="meta-label">ultimo capitulo</span>
+							<span class="meta-value" id="modalLanguage"></span>
+						</div>
+						-->
+
+						<div class="meta-item">
+							<span class="meta-label">ultimo capitulo</span>
+							<span class="meta-value" id="modalLastChapter"></span>
+						</div>
+
+						<div class="admin_actions">
+							<input class="newInput" type="number" id="inputChapter">
+							<button class="btn_Increment" id="btnIncrementOne">+1</button>
+							<button class="btn_Actualizar" id="btnActualizar"></button>
+
+						</div>
+
+
+					</div>
+					<div class="modal-actions">
+						<a href="#" target="_blank" class="btn btn-primary" id="modalLink">Leer Ahora</a>
+						<!--<button class="btn btn-primary">Leer ahora</button>-->
+						<button class="btn btn-secondary">Añadir a favoritos</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="../../js/pages/mangas.js"></script>
+
+	<ul>
+		<li>100-man no Inochi no Ue ni Ore wa Tatte Iru</li>
+		<li> Sonna Kazoku nara Sutechaeba 85</li>
+		<li>Ki ni Natteru Hito ga Otoko Janakatta</li>
+		<li>yani-neko</li>
+	</ul>
+
+
+
+</body>
+
+
+
+</html>
