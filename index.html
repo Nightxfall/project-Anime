@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Lista de animes</title>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="icon" href="assets/icons/ico.ico">
+
+
+	<link rel="stylesheet" type="text/css" href="css/global/Style__boddy.css">
+	<link rel="stylesheet" type="text/css" href="css/global/Style__header.css">
+	<link rel="stylesheet" type="text/css" href="css/global/Style__img.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+</head>
+
+<body>
+
+	<!-- ENCABEZADO Y NAVEGACIÓN -->
+	<header>
+		<nav>
+			<ul class="menu__horizontal">
+
+				<li><a href="#">My Anime List</a></li>
+
+				<li>
+					<a href="#">
+						<label for="buscar" class="search">Buscar</label>
+						<input id="buscar" type="search" placeholder="Buscar...">
+					</a>
+				</li>
+
+				<li><a href="index.html">Inicio</a></li>
+
+				<li>
+					<a href="#">Menu</a>
+
+					<ul class="menu__vertical">
+						<li><a href="pages/anime-recommended/Animes_recommended.html">Animes recomendados</a></li>
+						<li><a href="pages/anime-seen/Animes_seen.html">Animes vistos</a></li>
+						<li><a href="pages/movie-anime/Movie_anime.html">Películas Anime</a></li>
+						<li><a href="pages/movie-anime-seen/Movie_anime_seen.html">Películas Anime vistas</a></li>
+						<li><a href="pages/mangas/Mangas.html">Mangas</a></li>
+						<li><a href="pages/anime-temp/Animes_temp.html">Animes temporada</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="pages/anime-recent/Anime-recent.html">Recientes</a>
+				</li>
+
+				<li><a href="#login-modal">?</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+
+	<!-- CONTENIDO PRINCIPAL -->
+	<main class="all">
+
+		<section class="text">
+			<article>
+
+				<p>
+					Una lista de animes recopilados tras arduas
+					<strong>horas de investigación</strong>
+					<em>xD okno</em>, incluye películas y animes vistos...
+					por el momento.<br>
+
+					La mayoría de la lista se puede
+					<a href="https://www3.animeflv.net" target="_blank" rel="noopener noreferrer">
+						ver aquí
+					</a>
+				</p>
+
+				<ul class="lista__pag">
+					<li><a href="https://www3.animeflv.net" target="_blank" rel="noopener noreferrer">AnimeFlv</a></li>
+					<li><a href="https://animebum.net" target="_blank" rel="noopener noreferrer">Animebum</a></li>
+					<li><a href="https://www.animefenix.com" target="_blank" rel="noopener noreferrer">AnimeFenix</a>
+					</li>
+				</ul>
+
+			</article>
+		</section>
+
+
+		<!-- CATEGORÍAS PRINCIPALES -->
+		<div class="container">
+
+			<div class="box">
+				<img src="assets/img/inicio/86_L.jpg" alt="Animes recomendados">
+				<span>Animes recomendados</span>
+			</div>
+
+			<div class="box">
+				<img src="assets/img/inicio/V_Soul.jpg" alt="Animes vistos">
+				<span>Animes vistos</span>
+			</div>
+
+			<div class="box">
+				<img src="assets/img/inicio/photo_2022-03-05_23-08-25.jpg" alt="Películas anime">
+				<span>Películas anime</span>
+			</div>
+
+			<div class="box">
+				<img src="assets/img/inicio/Vivy-Fluore-Eyes-Song.jpg" alt="Películas anime vistas">
+				<span>Películas anime vistas</span>
+			</div>
+
+			<div class="box">
+				<img src="assets/img/inicio/Makima.jpg" alt="Mangas">
+				<span>Mangas</span>
+			</div>
+
+		</div>
+
+	</main>
+
+
+	<!-- VENTANA EMERGENTE DE INICIO DE SESIÓN -->
+	<div id="login-modal" class="modal">
+
+		<div class="modal__content">
+
+			<a href="#" class="modal__close" aria-label="Cerrar ventana">&times;</a>
+
+			<h2 class="modal__title">Acceso Admin</h2>
+
+			<form class="modal__form">
+
+				<div class="input-group">
+					<label for="admin_user">Usuario</label>
+					<input type="text" id="admin_user" name="username" placeholder="Usuario" required>
+				</div>
+
+				<div class="input-group">
+					<label for="admin_password">Contraseña</label>
+					<input type="password" id="admin_password" name="password" placeholder="Contraseña" required>
+				</div>
+
+				<button type="submit" class="modal__btn">
+					Ingresar
+				</button>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
