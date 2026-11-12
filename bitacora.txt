@@ -1,0 +1,4 @@
+
+actualizacion 1 12-11-26
+- reducir a 3 páginas principales (animes, mangas y peliculas) y una página necesaria (temporada) 
+- página mangas: cambios
